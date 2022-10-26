@@ -23,7 +23,7 @@ object SparkSQL01_Demo {
     import spark.implicits._
 
     //读取json文件，创建DataFrame("username":"lisi","age":18)
-    val df:DataFrame = spark.read.json("files/user.json")
+    val df:DataFrame = spark.read.json("D:\\数据文件\\idea_project\\SparkSQL\\src\\files\\user.json")
     df.show()
     // SQL风格语法
     df.createOrReplaceTempView("user")
@@ -49,7 +49,7 @@ object SparkSQL01_Demo {
     val df2:DataFrame = ds1.toDF()
     //RDD 返回的 RDD 类型为 Row，里面提供的 getXXX 方法可以获取字段值，类似 jdbc 处理结果集， 但是索引从 0 开始
     val rdd2:RDD[Row] = df2.rdd
-    rdd2.foreach(a=>println(a.getString(1)))
+    //rdd2.foreach(a=>println(a.getString(1)))
 
     //***********RDD=>DataSet************
     rdd1.map {
