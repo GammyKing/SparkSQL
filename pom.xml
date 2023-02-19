@@ -21,9 +21,9 @@
     <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming -->
     <dependency>
         <groupId>org.apache.spark</groupId>
-        <artifactId>spark-streaming_2.12</artifactId>
-        <version>2.4.0</version>
-        <scope>provided</scope>
+        <artifactId>spark-streaming_2.11</artifactId>
+        <version>2.1.1</version>
+        <scope>scope</scope>
     </dependency>
     </dependencies>
 
